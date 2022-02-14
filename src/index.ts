@@ -16,13 +16,13 @@ const getFirstLine = (path: string) => {
   })
 }
 
-const DATA_DIR = 'C:\\Users\\Admin\\Desktop\\data\\live_studio_multi_hot_long'
-const ORIGIN_DATA_FILE = 'live_studio_output.csv'
+const DATA_DIR = 'C:\\Users\\Admin\\Desktop\\2022_02_14_03_20'
+const ORIGIN_DATA_FILE = 'streamlabs_output.csv'
 
-const GPU_LOCAL_USAGE = /.*\\GPU Process Memory\(.*\)\\Local Usage$/g
-const GPU_UTILIZATION_PERCENTAGE = /.*\\GPU Engine\(.*\)\\Utilization Percentage$/g
-const PROCESS_PROCESSOR_TIME = /.*\\Process\(.*\)\\% Processor Time$/g
-const PROCESS_WORKING_SET = /.*\\Process\(.*\)\\Working Set$/g
+const GPU_LOCAL_USAGE = /.*\\GPU Process Memory\(.*\)\\Local Usage$/
+const GPU_UTILIZATION_PERCENTAGE = /.*\\GPU Engine\(.*\)\\Utilization Percentage$/
+const PROCESS_PROCESSOR_TIME = /.*\\Process\(.*\)\\% Processor Time$/
+const PROCESS_WORKING_SET = /.*\\Process\(.*\)\\Working Set - Private$/
 
 const outputDir = path.join(DATA_DIR, 'output')
 if (!fs.existsSync(outputDir)) {

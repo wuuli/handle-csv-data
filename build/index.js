@@ -64,12 +64,12 @@ var getFirstLine = function (path) {
         });
     });
 };
-var DATA_DIR = 'C:\\Users\\Admin\\Desktop\\data\\live_studio_multi_hot_long';
-var ORIGIN_DATA_FILE = 'live_studio_output.csv';
-var GPU_LOCAL_USAGE = /.*\\GPU Process Memory\(.*\)\\Local Usage$/g;
-var GPU_UTILIZATION_PERCENTAGE = /.*\\GPU Engine\(.*\)\\Utilization Percentage$/g;
-var PROCESS_PROCESSOR_TIME = /.*\\Process\(.*\)\\% Processor Time$/g;
-var PROCESS_WORKING_SET = /.*\\Process\(.*\)\\Working Set$/g;
+var DATA_DIR = 'C:\\Users\\Admin\\Desktop\\2022_02_14_03_20';
+var ORIGIN_DATA_FILE = 'streamlabs_output.csv';
+var GPU_LOCAL_USAGE = /.*\\GPU Process Memory\(.*\)\\Local Usage$/;
+var GPU_UTILIZATION_PERCENTAGE = /.*\\GPU Engine\(.*\)\\Utilization Percentage$/;
+var PROCESS_PROCESSOR_TIME = /.*\\Process\(.*\)\\% Processor Time$/;
+var PROCESS_WORKING_SET = /.*\\Process\(.*\)\\Working Set - Private$/;
 var outputDir = path_1.default.join(DATA_DIR, 'output');
 if (!fs_1.default.existsSync(outputDir)) {
     fs_1.default.mkdirSync(outputDir);
